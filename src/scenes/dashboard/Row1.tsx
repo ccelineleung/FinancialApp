@@ -2,7 +2,7 @@ import BoxHeader from '@/components/BoxHeader'
 import DashboardBox from '@/components/DashboardBox'
 import { useGetKpisQuery } from '@/state/api'
 import { useTheme } from '@mui/material'
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { AreaChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip, Area, Line, Legend, LineChart, BarChart, Bar } from 'recharts'
 
 
@@ -10,7 +10,7 @@ import { AreaChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip, A
 const Row1 = () => {
     const { palette } = useTheme();
     const { data } = useGetKpisQuery();
-    console.log('data', data)
+    // console.log('data', data)
 
     const revenueExpenses = useMemo(() => {
         return (
