@@ -1,6 +1,7 @@
 import BoxHeader from '@/components/BoxHeader'
 import DashboardBox from '@/components/DashboardBox'
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api'
+import { useTheme } from '@mui/material'
 import { Box } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 import React from 'react'
@@ -8,7 +9,7 @@ import React from 'react'
 type Props = {}
 
 const Row3 = (props: Props) => {
-
+    const { palette } = useTheme();
     const { data: kpiData } = useGetKpisQuery()
     const { data: productData } = useGetProductsQuery()
     const { data: transactionData } = useGetTransactionsQuery()
@@ -27,7 +28,9 @@ const Row3 = (props: Props) => {
                     }}
                 >
 
-                    <DataGrid />
+                    <DataGrid 
+                    rows={productData || []}
+                    columns={productColumns}/>
                 </Box>
             </DashboardBox >
 
