@@ -187,7 +187,7 @@ const Row3 = () => {
                         height='15px'
                         bgcolor={palette.primary[600]}
                         borderRadius='1rem'
-                        width='40%'
+                        width='40%' 
                     ></Box>
                     <Typography margin='1rem 1rem' variant='h6'>
                         Overall Summary is balbalbal blablabla blablab balbalb.
